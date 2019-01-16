@@ -476,6 +476,15 @@ a {
 .wrapper--medium {
 		max-width: 976px;
 	}
+.wrapper--no-padding-until-medium {
+		padding: 0;
+	}
+@media (min-width: 800px) {
+.wrapper {
+		padding-left: 18px;
+		padding-right: 18px
+}
+	}
 .wrapper .wrapper {
 		padding-left: 0;
 		padding-right: 0;
@@ -496,13 +505,27 @@ a {
 		padding: 4.5rem 0
 }
 	}
+.page-section--no-b-padding-until-medium {
+		padding-bottom: 0;
+	}
+@media (min-width: 800px) {
+.page-section--no-b-padding-until-medium {
+			padding-bottom: 4.5rem
+	}
+	}
 .page-section--blue {
 		background-color: #2f5572;
 		color: #fff;
 	}
 .page-section--testimonials {
-		background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-		background-size: cover;
+		background: #e0e6ef;
+	}
+@media (min-width: 800px) {
+.page-section--testimonials {
+			background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+			background-size: cover;
+			background-color: transparent
+	}
 	}
 .section-title {
 	font-size: 2.55rem;
@@ -530,7 +553,7 @@ a {
 .section-title__icon {
 			position: relative;
 			top: 8px;
-			margin-right: .5rem;
+			margin-right: 1rem;
 			margin-left: 0;
 			margin-bottom: 0;
 			display: inline-block
@@ -541,14 +564,23 @@ a {
 		clear: both;
 		display: table;
 	}
+.row--t-padding {
+		padding-top: 80px;
+	}
 .row--gutters {
 		margin-right: -65px;
+	}
+.row--gutters-small {
+		margin-right: -45px;
 	}
 .row--gutters-large {
 		margin-right: -100px;
 	}
 .row--gutters > div {
 		padding-right: 65px;
+	}
+.row--gutters-small > div {
+		padding-right: 45px;
 	}
 .row--gutters-large > div {
 		padding-right: 100px;
@@ -585,6 +617,20 @@ a {
 			width: 63%;
 		}
 	}
+/* Begin Equal Height Rules */
+@media (min-width: 800px) {
+.row--equal-height-at-medium {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex
+	}
+	}
+.row--equal-height-at-medium > div {
+			float: none;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
 .feature-item {
 	position: relative;
 	padding-bottom: 2.5rem;
@@ -620,8 +666,17 @@ a {
 	}
 .testimonial {
 	background-color: rgba(255,255,255,.8);
-	padding: 0 1.8125rem 1px 1.8125rem;
+	padding: 0 18px 1px 18px;
+	padding-bottom: 98px;
 }
+@media (min-width: 800px) {
+.testimonial {
+		padding: 0 1.8125rem 1px 1.8125rem
+}
+	}
+.testimonial--last {
+		margin-bottom: 0;
+	}
 .testimonial__photo {
 		border-radius: 80px;
 		overflow: hidden;
@@ -634,10 +689,10 @@ a {
 	}
 .testimonial__title {
 		color: #2f5572;
+		text-align: center;
 		font-size: 1.5rem;
 		font-weight: 500;
 		margin: 0;
-		text-align: center;
 	}
 .testimonial__subtitle {
 		color: #d59541;
